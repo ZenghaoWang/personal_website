@@ -1,6 +1,9 @@
-# Personal Website 
+# Personal Website
 
-## Stack:
+After a million failed attempts to design my own website, this one will work I swear 
 
-- NextJS
+## Stack
+
+- NextJS, bootstrapped by create-next-app
 - Typescript
+- Scss modules for component-scoped styling
