@@ -5,16 +5,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .footerHeader {
+    margin-right: 20px;
+  }
+  img {
+    margin-left: 0.4rem;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .logo {

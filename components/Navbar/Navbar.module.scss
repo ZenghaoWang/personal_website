@@ -1,0 +1,10 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  a {
+    $x: 10px;
+    margin: $x $x $x $x;
+  }
+}
