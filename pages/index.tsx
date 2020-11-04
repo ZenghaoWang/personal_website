@@ -10,13 +10,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className={styles.title}>Hi! I'm Zenghao.</h1>
 
         <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+          I'm a 3rd year student at the University of Toronto studying computer
+          science, mathematics, and Roman History.
         </p>
 
         <div className={styles.grid}>

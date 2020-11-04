@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  flex-shrink: 0;
 
   .footerHeader {
     margin-right: 20px;

@@ -2,6 +2,8 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  position: fixed;
+  top: 0;
 
   a {
     $x: 10px;
