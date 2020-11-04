@@ -1,5 +1,5 @@
-const Testes = () => {
-  return <h1>hello</h1>;
+const Post = () => {
+  return <h1>Post</h1>;
 };
 
-export default Testes;
+export default Post;

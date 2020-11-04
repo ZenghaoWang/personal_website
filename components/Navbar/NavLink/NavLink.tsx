@@ -19,7 +19,7 @@ const NavLink: React.FC<NavLinkProps> = ({ children, href }) => {
   const status = isActive() ? styles.active : styles.inactive;
   return (
     <Link href={href}>
-      <a className={status}>{children}</a>
+      <a className={`${status} ${styles.link}`}>{children}</a>
     </Link>
   );
 };
