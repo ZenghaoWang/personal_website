@@ -1,23 +1,24 @@
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
+import ActiveAnchor from "../ActiveAnchor/ActiveAnchor";
+
+const NavLink: React.FC<{ href: string }> = ({ href, children }) => {
+  return (
+    <Link href={href} passHref>
+      <ActiveAnchor href={href}>{children}</ActiveAnchor>
+    </Link>
+  );
+};
 export default function Navbar() {
   return (
     <div className={styles.navbar}>
-      <Link href="/">
-        <a>Home</a>
-      </Link>
+      <NavLink href="/">Home</NavLink>
 
-      <Link href="/experience">
-        <a>Experience</a>
-      </Link>
+      <NavLink href="/experience">Experience</NavLink>
 
-      <Link href="/academics">
-        <a>Academics</a>
-      </Link>
+      <NavLink href="/academics">Academics</NavLink>
 
-      <Link href="/blog/home">
-        <a>Blog</a>
-      </Link>
+      <NavLink href="/blog">Blog</NavLink>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function Home() {
 
         <p className={styles.description}>
           I'm a 3rd year student at the University of Toronto studying computer
-          science, mathematics, and Roman History.
+          science, mathematics, and Roman history.
         </p>
 
         <div className={styles.grid}>
