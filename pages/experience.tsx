@@ -1,5 +1,5 @@
 const experience: React.FC = () => {
-  return <div>My Experience</div>;
+  return <h1>My Experience</h1>;
 };
 
 export default experience;

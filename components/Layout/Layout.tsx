@@ -4,10 +4,12 @@ import styles from "./Layout.module.scss";
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div className={styles.container}>
+    <div>
       <Navbar />
-      {children}
-      <Footer />
+      <div className={styles.container}>
+        {children}
+        <Footer />
+      </div>
     </div>
   );
 };
