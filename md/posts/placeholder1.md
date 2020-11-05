@@ -12,7 +12,8 @@ My name is Zenghao
 - Typescript
 - NextJS
 - SCSS Modules
-- Gray Matter + Marked for Markdown parsing
+- Gray Matter + react-markdown for Markdown parsing
+- react-syntax-highlighting
 
 ```python
 define hello():

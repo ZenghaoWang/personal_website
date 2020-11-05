@@ -1,15 +1,16 @@
 import fs from "fs";
 import path from "path";
-import marked from "marked";
 import matter from "gray-matter";
 import Head from "next/head";
+import ReactMarkdown from "react-markdown";
+import CodeBlock from "../../components/CodeBlock/CodeBlock";
 
 type PostProps = {
-  htmlString: string;
+  markdownContent: string;
   metadata: { [key: string]: any };
 };
 
-const Post = ({ htmlString, metadata }: PostProps) => {
+const Post = ({ markdownContent, metadata }: PostProps) => {
   return (
     <div>
       <Head>
@@ -17,7 +18,10 @@ const Post = ({ htmlString, metadata }: PostProps) => {
         <meta title="description" content={metadata.description} />
       </Head>
 
-      <div dangerouslySetInnerHTML={{ __html: htmlString }} />
+      <ReactMarkdown
+        children={markdownContent}
+        renderers={{ code: CodeBlock }}
+      />
     </div>
   );
 };
@@ -47,12 +51,11 @@ export const getStaticProps = async (context: ContextType) => {
     .toString();
 
   const parsedMarkdown = matter(markdownWithMetadata);
-  const htmlString = marked(parsedMarkdown.content);
 
   return {
     props: {
-      htmlString,
       metadata: parsedMarkdown.data,
+      markdownContent: parsedMarkdown.content,
     },
   };
 };
