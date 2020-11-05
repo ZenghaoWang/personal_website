@@ -1,9 +1,17 @@
 ---
-title: My Website
+title: About My Website
 description: Stuff about my website I guess
+date: '2020-11-03'
+published: true
+pinned: false
 ---
 
-# My Website
+# About This Site
+
+```python
+def hello():
+    print("Welcome to my site!")
+```
 
 After a million failed attempts to design my own website, this one will work I swear
 

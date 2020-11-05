@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "../../components/CodeBlock/CodeBlock";
+import { POSTS_PATH } from "../../util/paths";
 
 type PostProps = {
   markdownContent: string;
@@ -18,6 +19,7 @@ const Post = ({ markdownContent, metadata }: PostProps) => {
         <meta title="description" content={metadata.description} />
       </Head>
 
+      <h3>{`Date Published: ${metadata.date}`}</h3>
       <ReactMarkdown
         children={markdownContent}
         renderers={{ code: CodeBlock }}
@@ -26,10 +28,8 @@ const Post = ({ markdownContent, metadata }: PostProps) => {
   );
 };
 
-const POST_PATHS = "md/posts";
-
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(POST_PATHS);
+  const files = fs.readdirSync(POSTS_PATH);
 
   const paths = files.map((file) => ({
     params: {
@@ -47,7 +47,7 @@ type ContextType = { params: { slug: string } };
 export const getStaticProps = async (context: ContextType) => {
   const slug = context.params.slug;
   const markdownWithMetadata = fs
-    .readFileSync(path.join(POST_PATHS, `${slug}.md`))
+    .readFileSync(path.join(POSTS_PATH, `${slug}.md`))
     .toString();
 
   const parsedMarkdown = matter(markdownWithMetadata);
