@@ -7,17 +7,8 @@ import React, { FunctionComponent } from "react";
 import { POSTS_PATH } from "../../util/paths";
 import BlogPostListing from "../../components/BlogPostListing/BlogPostListing";
 
-export type PostData = {
-  slug: string;
-  title: string;
-  isPublished: boolean;
-  isPinned: boolean;
-  date: string;
-  description: string;
-};
-
 type PostsProp = {
-  posts: PostData[];
+  posts: PostMetadata[];
 };
 
 const BlogHome: FunctionComponent<PostsProp> = ({ posts }) => {
@@ -28,7 +19,7 @@ const BlogHome: FunctionComponent<PostsProp> = ({ posts }) => {
       </Head>
       <h1>Blog Posts</h1>
       {posts.map((post) => {
-        return <BlogPostListing post={post} />;
+        return <BlogPostListing key={post.slug} post={post} />;
       })}
     </div>
   );
@@ -36,7 +27,7 @@ const BlogHome: FunctionComponent<PostsProp> = ({ posts }) => {
 
 export async function getStaticProps() {
   // go through the posts directory and grab a list of post metadata
-  const postData: PostData[] = fs
+  const postData: PostMetadata[] = fs
     .readdirSync(POSTS_PATH)
     .map((fileName) => {
       const markdownWithMetaData = fs

@@ -8,7 +8,7 @@ import { POSTS_PATH } from "../../util/paths";
 
 type PostProps = {
   markdownContent: string;
-  metadata: { [key: string]: any };
+  metadata: PostMetadata;
 };
 
 const Post = ({ markdownContent, metadata }: PostProps) => {
