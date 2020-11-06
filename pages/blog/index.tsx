@@ -5,8 +5,9 @@ import Link from "next/link";
 import path from "path";
 import React, { FunctionComponent } from "react";
 import { POSTS_PATH } from "../../util/paths";
+import BlogPostListing from "../../components/BlogPostListing/BlogPostListing";
 
-type PostData = {
+export type PostData = {
   slug: string;
   title: string;
   isPublished: boolean;
@@ -27,17 +28,7 @@ const BlogHome: FunctionComponent<PostsProp> = ({ posts }) => {
       </Head>
       <h1>Blog Posts</h1>
       {posts.map((post) => {
-        return (
-          <div key={post.slug}>
-            <Link href={`/blog/${post.slug}`}>
-              <a>
-                <h2>{post.title}</h2>
-                <h3>{post.date}</h3>
-                <p>{post.description}</p>
-              </a>
-            </Link>
-          </div>
-        );
+        return <BlogPostListing post={post} />;
       })}
     </div>
   );
