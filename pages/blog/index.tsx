@@ -56,11 +56,11 @@ export async function getStaticProps() {
 
       return {
         slug: slug,
-        title: parsedMarkdown.data.title,
-        isPublished: parsedMarkdown.data.published,
-        isPinned: parsedMarkdown.data.pinned,
-        date: parsedMarkdown.data.date,
-        description: parsedMarkdown.data.description,
+        title: parsedMarkdown.data.title || "No title",
+        isPublished: parsedMarkdown.data.published || false,
+        isPinned: parsedMarkdown.data.pinned || false,
+        date: parsedMarkdown.data.date || "No Date",
+        description: parsedMarkdown.data.description || "No Description",
       };
     })
     .filter((post) => post.isPublished) // only want published posts
