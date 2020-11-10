@@ -2,8 +2,14 @@
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
+  flex: 1;
   flex-direction: column;
   // Uncomment to start content in middle of screen
-  // justify-content: center;
+  justify-content: center;
   align-items: center;
+}
+
+.footer {
+  padding: 0px 0px;
+  margin-top: auto;
 }

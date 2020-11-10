@@ -1,5 +1,6 @@
+@use '../../../styles/colors';
 .active {
-  color: #0070f3;
+  color: colors.$secondary_color;
   font-weight: bold;
 }
 .inactive {

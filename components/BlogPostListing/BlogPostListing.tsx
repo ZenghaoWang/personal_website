@@ -7,13 +7,15 @@ type BlogPostProps = {
 
 const BlogPostListing: React.FC<BlogPostProps> = ({ post }) => {
   return (
-    <Link href={`/blog/${post.slug}`}>
-      <a>
-        <h2 className={styles.title}>{post.title}</h2>
-        <h3 className={styles.date}>{post.date}</h3>
-        <p className={styles.description}>{post.description}</p>
-      </a>
-    </Link>
+    <div className={styles.container}>
+      <Link href={`/blog/${post.slug}`}>
+        <a>
+          <h2 className={styles.title}>{post.title}</h2>
+        </a>
+      </Link>
+      <h4 className={styles.date}>{post.date}</h4>
+      <p className={styles.description}>{post.description}</p>
+    </div>
   );
 };
 

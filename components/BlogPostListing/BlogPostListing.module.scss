@@ -1,10 +1,11 @@
+@use '../../styles/colors';
 .title {
   margin-bottom: 0px;
 }
 .date {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: green;
+  color: colors.$secondary_color;
 }
 
 .description {
