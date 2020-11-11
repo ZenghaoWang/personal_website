@@ -5,6 +5,7 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "../../components/CodeBlock/CodeBlock";
 import { POSTS_PATH } from "../../util/paths";
+import styles from "../../styles/BlogPost.module.scss";
 
 type PostProps = {
   markdownContent: string;
@@ -19,8 +20,11 @@ const Post = ({ markdownContent, metadata }: PostProps) => {
         <meta title="description" content={metadata.description} />
       </Head>
 
-      <h1>{metadata.title}</h1>
-      <h3 className="highlight-tertiary">{`Date Published: ${metadata.date}`}</h3>
+      <div className={styles.header}>
+        <h1>{metadata.title}</h1>
+        <h3 className="highlight-tertiary">{`Date Published: ${metadata.date}`}</h3>
+      </div>
+
       <ReactMarkdown
         children={markdownContent}
         renderers={{ code: CodeBlock }}

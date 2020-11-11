@@ -6,7 +6,8 @@
   position: fixed;
   top: 0;
   a {
-    $x: 10px;
+    $x: 5px;
     margin: $x $x $x $x;
+    font-size: 1.25rem;
   }
 }
