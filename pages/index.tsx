@@ -13,8 +13,11 @@ export default function Home() {
         <h1 className={styles.title}>Hi! I'm Zenghao.</h1>
 
         <p className={styles.description}>
-          I'm a 3rd year student at the University of Toronto studying computer
-          science, mathematics, and Roman history.
+          I'm a 3rd year student at the{" "}
+          <span className="highlight-tertiary">University of Toronto</span>{" "}
+          studying <span className="highlight-tertiary">computer science</span>,{" "}
+          <span className="highlight-tertiary">mathematics</span>, and{" "}
+          <span className="highlight-tertiary">Roman history</span>.
           <br />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel
           rutrum sem, ultrices tristique eros. Duis viverra efficitur turpis

@@ -5,9 +5,6 @@ date: '2020-11-05'
 published: true
 pinned: false
 ---
-
-# Hello
-
 My name is Zenghao
 
 ## Stack

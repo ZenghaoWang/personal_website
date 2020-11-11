@@ -19,7 +19,8 @@ const Post = ({ markdownContent, metadata }: PostProps) => {
         <meta title="description" content={metadata.description} />
       </Head>
 
-      <h3>{`Date Published: ${metadata.date}`}</h3>
+      <h1>{metadata.title}</h1>
+      <h3 className="highlight-tertiary">{`Date Published: ${metadata.date}`}</h3>
       <ReactMarkdown
         children={markdownContent}
         renderers={{ code: CodeBlock }}

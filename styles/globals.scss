@@ -3,15 +3,28 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Quattrocento Sans, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   line-height: 1.6;
   font-size: 18px;
   height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Work Sans;
+}
+
 .highlight-secondary {
   color: colors.$secondary_color;
+}
+.highlight-tertiary {
+  color: colors.$tertiary_color;
 }
 
 * {
@@ -31,4 +44,8 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+::selection {
+  background: colors.$highlight_color;
 }

@@ -1,12 +1,10 @@
 ---
-title: About My Website
+title: How I Made this Website
 description: Stuff about my website I guess
 date: '2020-11-03'
 published: true
 pinned: false
 ---
-
-# About This Site
 
 ```python
 def hello():

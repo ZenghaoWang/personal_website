@@ -1,9 +1,6 @@
-import { TypographyStyle, GoogleFont } from "react-typography";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import styles from "./Layout.module.scss";
-import Head from "next/head";
-import typography from "../../styles/typography";
 
 const Layout: React.FC = ({ children }) => {
   return (

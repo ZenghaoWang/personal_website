@@ -6,6 +6,4 @@ published: true
 pinned: false
 ---
 
-# My Programming Set-up
-
 Vscode + Vscodevim

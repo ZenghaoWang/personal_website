@@ -6,6 +6,5 @@ published: true
 pinned: false
 ---
 
-# Hello
 
 heehoo peanut
