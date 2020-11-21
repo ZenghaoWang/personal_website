@@ -28,7 +28,7 @@ const experience: React.FC = () => {
       <p>
         In case you want a hard-copy of my resume,{" "}
         <a
-          href="https://github.com/ZenghaoWang/MyResume/blob/master/resume.pdf"
+          href="https://github.com/ZenghaoWang/MyResume/releases/latest/download/resume.pdf"
           target="_blank"
         >
           here it is.
